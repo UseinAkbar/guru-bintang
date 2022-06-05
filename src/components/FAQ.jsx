@@ -41,7 +41,7 @@ const FAQ = () => {
             <ul className="faq__list">
                 {listFAQ.map(({question, answer}, i) => {
                     return (
-                        <li className='faq__item' onClick={() => handleClick(i)}>
+                        <li className='faq__item' onClick={() => handleClick(i)} key={i}>
                             <h1 className="faq__question">{question}</h1>
                             <div className="faq__panel">
                                 <p className="faq__answer">{answer}</p>

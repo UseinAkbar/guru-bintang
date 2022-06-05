@@ -34,7 +34,7 @@ const Register = () => {
 
         fetch('https://rangkoom.com/gurubintang/api/v1/auth/register', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json',  'Accept': 'application/json'},
+                headers: { 'Content-Type': 'application/json',  'Accept': 'application/json' },
                 body: JSON.stringify({
                     username: username,
                     email: email,

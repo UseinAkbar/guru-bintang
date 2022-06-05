@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import Kelas from "./components/Kelas";
+import Tentang from "./components/Tentang";
 import DetailKelas from "./components/DetailKelas";
 import Checkout from "./components/Checkout";
 import InstruksiBayar from "./components/InstruksiBayar";
@@ -38,6 +39,7 @@ const App = () => {
             <Route path='transaksi' element={<DaftarTransaksi />} />
           </Route>
           <Route path='kelas' element={<Kelas />} />
+          <Route path='tentang' element={<Tentang />} />
           <Route path='detail-kelas/:judul' element={<DetailKelas />} />
           <Route path='checkout/:judul' element={<Checkout />} />
           <Route path='instruksi-pembayaran' element={<InstruksiBayar />} />

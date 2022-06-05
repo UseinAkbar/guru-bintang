@@ -17,6 +17,16 @@ import kelasDashboard1 from './asset/images/kelas-dashboard1.png';
 import kelasDashboard2 from './asset/images/kelas-dashboard2.png';
 import profilTestimoni from './asset/images/testimoni.png'
 import pengenalan_kelas from './asset/images/pengenalan_kelas.png';
+import mozaik_1 from './asset/images/mozaik_1.png';
+import mozaik_2 from './asset/images/mozaik_2.png';
+import mozaik_3 from './asset/images/mozaik_3.png';
+import mozaik_4 from './asset/images/mozaik_4.png';
+import mozaik_5 from './asset/images/mozaik_5.png';
+import kemal from './asset/images/kemal.png';
+import nisrina from './asset/images/nisrina.png';
+import usein from './asset/images/usein.png';
+import alfian from './asset/images/alfian.png';
+import alfara from './asset/images/alfara.png';
 
 const perks = [
     {
@@ -74,9 +84,9 @@ class Review {
 }
 
 class FAQ {
-    constructor(question) {
+    constructor(question, answer) {
         this.question = question
-        this.answer = 'Akses materi yang berupa Modul, Video Pembelajaran, Quiz, Pre-Test, dan Post Test yang lengkap dalam satu platform. Pelajari sekarang di kelas online Guru Bintang.'
+        this.answer = answer
     }
 }
 
@@ -123,6 +133,23 @@ class Materi {
     }
 }
 
+class Tim {
+    constructor(nama, role, image, sosmed) {
+        this.nama = nama
+        this.role = role
+        this.image = image
+        this.sosmed = sosmed
+    }
+}
+
+const listTim = [
+    new Tim('Kemal Aziz', 'Business Analyst', kemal, ['https://www.linkedin.com/in/kemal-aziz-ab706b1bb/', 'https://www.instagram.com/kemaldon/']),
+    new Tim('Nisrina Thifal Khairunnisa', 'Product Designer', nisrina, ['www.linkedin.com/in/nisrina-thifal', 'https://www.instagram.com/nisrinaaa.th/']),
+    new Tim('Usein Akbar', 'Front End Developer', usein, ['https://www.linkedin.com/in/usein-akbar-896379206/', 'https://www.instagram.com/useinakbarr/']),
+    new Tim('Alfian Nanda Putra', 'Backend Developer', alfian, ['https://www.linkedin.com/in/alfarand/', 'https://www.instagram.com/alfaraaa.nd/']),
+    new Tim('Alfara Nafi Dinara', 'Backend Developer', alfara, ['https://www.linkedin.com/in/alfarand/', 'https://www.instagram.com/alfaraaa.nd/'])
+]
+
 const listMateri = [
    new Materi('Pengenalan Kelas', {content: pengenalan_kelas}),
    new Materi('Standar Kompetensi Guru', {content: 'Kompetensi pedagogik adalah suatu kemampuan yang harus dimiliki guru dalam mengelola pembelajaran peserta didik, termasuk menguasai dan memahami karakter mereka. Dalam standar kompetensi guru ini, guru juga harus mampu membuat rancangan pembelajaran yang sesuai dengan kebutuhan peserta didik dan kurikulum yang sedang berjalan.', title_content: 'Kompetensi Pedagogik'}),
@@ -164,10 +191,10 @@ const listReview = [
 ]
 
 const listFAQ = [
-    new FAQ('Apa itu Guru Bintang?'),
-    new FAQ('Bagaimana saya dapat belajar di Guru Bintang?'),
-    new FAQ('Apa saya akan dibantu untuk masuk atau dimudahkan dalam seleksi PNS?'),
-    new FAQ('Apakah materi yang ada di kelas Guru Bintang berguna untuk mendaftar PNS?'),
+    new FAQ('Apa itu Guru Bintang?', 'Akses materi berupa Modul, Video Pembelajaran, Quiz, Pre-Test, dan Post Test yang lengkap dalam satu platform. Pelajari sekarang di kelas online Guru Bintang.'),
+    new FAQ('Bagaimana saya dapat belajar di Guru Bintang?', 'Anda dapat membeli/mengakses kelas yang terdapat pada platform kami baik berbayar maupun gratis. Silakan anda nikmati kelas yang anda minati untuk menunjang kompetensi diri anda.'),
+    new FAQ('Apa saya akan dibantu untuk masuk atau dimudahkan dalam seleksi PNS?', 'Platform kami akan membuka kelas pelatihan untuk sertifikasi dengan latihan dan soal dari berbagai tahun - tahun sebelumnya dengan harapan membantu anda dalam mengikuti sertifikasi nanti.'),
+    new FAQ('Apakah materi yang ada di kelas Guru Bintang berguna untuk mendaftar PNS?', 'Kami memberikan kelas untuk meningkatkan kompetensi anda dalam percepatan teknologi, Mulai dari pemanfaatan social media, coding untuk guru dll. Agar anda bisa mendapatkan kesempatan untuk memiliki portofolio digital.'),
 ]
 
 const listFasilitas = [
@@ -177,6 +204,15 @@ const listFasilitas = [
     new Fasilitas(faq, 'Konsultasi dengan Mentor (selama 30 hari)'),
     new Fasilitas(chat, 'Akses ke Komunitas Pengajar'),
     new Fasilitas(certificate, 'E-Sertifikat')
+]
+
+const listTentangFasilitas = [
+    new Fasilitas(learning, 'Materi/Modul'),
+    new Fasilitas(video, 'Video Pembelajaran'),
+    new Fasilitas(faq, 'Mentoring'),
+    new Fasilitas(chat, 'Akses ke Komunitas Pengajar'),
+    new Fasilitas(certificate, 'E-Sertifikat'),
+    new Fasilitas(test, 'Post Test')
 ]
 
 const langkahBayar = [
@@ -190,4 +226,6 @@ const langkahBayar = [
     'Simpan struk sebagai bukti pembayaran Anda'
 ]
 
-export {perks, listKelas, listTestimoni, listFAQ, listFasilitas, listReview, langkahBayar, listDashboardKelas, listDashboardSertif, listTransaksi, listMateri}
+const listTentangImage = [mozaik_1, mozaik_2, mozaik_3, mozaik_4, mozaik_5]
+
+export {perks, listKelas, listTestimoni, listFAQ, listFasilitas, listReview, langkahBayar, listDashboardKelas, listDashboardSertif, listTransaksi, listMateri, listTentangImage, listTentangFasilitas, listTim}
