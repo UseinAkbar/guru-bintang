@@ -1,0 +1,26 @@
+.listKelas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+
+    &__detail {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-auto-rows: min-content;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            @include alignColumn;
+            gap: 1rem;
+            color: #717375;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        a {
+            @include ctaSecondary;
+        }
+    }
+}

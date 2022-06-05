@@ -1,0 +1,103 @@
+.allkelas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 5rem;
+    padding: 5rem 8rem;
+    min-height: 80vh;
+
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    &__back,
+    &__tab-box {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__back,
+    &__back:visited {
+        @include alignColumn;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #3D3F40;
+        background-color: #ECEFFB;
+        border-radius: 8px;
+        justify-self: start;
+        transition: .1s ease;
+
+        &:active {
+            transform: scale(.96);
+        }
+    }
+
+    &__tab {
+        @include titleNavDashboard;
+        color: #717375;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #1D2E6C;
+            border-radius: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .15s ease;
+        }
+    }
+
+    &__tab-box {
+        @include alignColumn;
+        gap: 1rem;
+        justify-self: center;
+
+        input:checked  ~ .allkelas__tab::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        input:checked  ~ .allkelas__tab {
+            color: #1D2E6C;
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 55vw;
+        grid-auto-rows: min-content;
+        justify-content: center;
+    }
+}
+
+.allkelas-checked {
+    font-size: 1.6rem;
+        font-weight: 600;
+        padding: 1rem 2rem 2.5rem;
+        color: #1D2E6C;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #1D2E6C;
+            border-radius: 2px;
+            opacity: 1;
+            visibility: visible;
+        }
+}

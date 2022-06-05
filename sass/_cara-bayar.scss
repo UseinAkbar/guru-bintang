@@ -1,0 +1,49 @@
+.bayar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    width: 90%;
+    justify-self: center;
+    
+    &__title {
+        font-size: 2rem;
+        color: #717375;
+    }
+    
+    &__instruksi {
+        @include instruksiBayar;
+        width: 100%;
+        justify-self: unset;
+
+        & > div {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            grid-gap: 1rem;
+        }
+
+        div:not(:last-child) {
+            border-bottom: 1px solid #DFE4F7;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__metode {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    &__list {
+        list-style-position: inside;
+    }
+    
+    &__item {
+        font-size: 1.2rem;
+        color: #717375;
+        
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}

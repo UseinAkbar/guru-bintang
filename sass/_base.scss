@@ -1,0 +1,108 @@
+// FONT
+$font-primary: 'Poppins', sans-serif;
+
+//COLOR
+$color-font-primary: #0A0A0A;
+$color-font-secondary: #717375;
+$color-font-soft: #5D5F60;
+$color-font-soften: #989B9E;
+$color-primary: #4E74F9;
+$color-secondary: #FDC614;
+$color-tertiary: #FFEBC0;
+
+//BREAKPOINTS
+$bp-tablet: 50em; //800px
+$bp-mobile: 31.25em; //500px
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //10px
+    scroll-behavior: smooth;
+  
+    @media only screen and (max-width: $bp-tablet) {
+      font-size: 56.25%; //9px
+    }
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 50%; //8px
+    }
+}
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-font-primary;
+    line-height: 1.6;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  background-color: #F6F8FF;
+  // background-color: $color-base;
+}
+
+.fixBody {
+  height: 100%;
+  overflow: hidden;
+}
+
+.kelas-suggestion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgba($color-font-primary, .6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 7;
+  transition: .1s ease;
+}
+
+.overlay.popUp {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kelas-notFound,
+.sertif-notFound,
+.transaksi-notFound {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+  margin-top: 3rem;
+
+  img {
+      width: 10rem;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+      text-align: center;
+  }
+
+  p {
+      color: #989B9E;
+      font-size: 1.4rem;
+      text-align: center;
+  }
+}

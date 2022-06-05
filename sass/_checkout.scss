@@ -1,0 +1,218 @@
+.checkout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    padding: 5rem 8rem;
+    
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    &__back,
+    &__title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__back {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        justify-self: start;
+        cursor: pointer;
+        transition: .1s ease;
+
+        img {
+            width: 2rem;
+        }
+
+        &:active {
+            transform: scale(.96);
+        }
+    }
+
+    &__title {
+        justify-self: center;
+        font-size: 2rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: minmax(55vw, max-content) 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 3rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        align-items: center;
+        align-self: start;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 8px;
+
+        &-image {
+            width: 20rem;
+        }
+
+        &-detail {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            grid-gap: 1rem;
+            align-content: center;
+            border-radius: 8px;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        &-delete {
+            width: 1.8rem;
+        }
+
+        &-desc {
+            font-size: 1.2rem;
+            color: $color-font-soften;
+            width: 90%;
+        }
+
+        &-spec {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        &-kategori {
+            @include fontSpec;
+            font-size: 1.2rem;
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            grid-gap: 1rem;
+
+            & > div {
+                @include alignColumn;
+            }
+
+            div img {
+                width: 2rem;
+            }
+        }
+
+        &-harga {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &-harga-coret {
+            @include hargaCoret;
+        }
+
+        &-harga-asli {
+            @include hargaTetap;
+        }
+    }
+
+    &__pembayaran {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2.5rem;
+
+        div > span {
+            font-size: 1.4rem;
+        }
+
+        > div span:first-child {
+            color: $color-font-soften;
+        }
+    }
+
+    &__form-harga,
+    &__form-totalDiskon,
+    &__form-totalBayar  {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form-harga {
+
+        span:last-child {
+            color: $color-font-soft;
+        }
+    }
+
+    &__form-diskon {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+
+        div {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 6px;
+        }
+
+        input {
+            outline: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: 1.2px solid #DFE4F6;
+            background-color: #F6F8FF;
+            font-family: $font-primary;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: .1s ease;
+
+            &:focus {
+                border: 1.2px solid $color-primary;
+            }
+        }
+
+        button {
+            @include cta;
+            color: $color-primary;
+            background-color: #fff;
+            border: 2px solid $color-primary;
+        }
+    }
+
+    &__form-totalDiskon {
+
+        span:last-child {
+            color: $color-font-soft;
+        }
+    }
+
+    &__form-totalBayar {
+        font-weight: 700
+    }
+
+    &__form-button {
+        @include cta;
+    }
+}

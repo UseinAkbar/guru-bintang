@@ -1,0 +1,141 @@
+.instruksi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 5rem;
+    padding: 5rem 8rem;
+    
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    &__back,
+    &__title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__back {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        justify-self: start;
+        cursor: pointer;
+        transition: .1s ease;
+
+        img {
+            width: 2rem;
+        }
+
+        &:active {
+            transform: scale(.96);
+        }
+    }
+
+    &__title {
+        justify-self: center;
+        font-size: 2rem;
+    }
+
+    &__heading {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    &__info {
+
+    }
+
+    &__countdown span,
+    &__info-timeout {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #F6AB2C;
+    }
+
+    &__batas-akhir {
+        font-size: 1.6rem;
+        color: $color-font-soft;
+    }
+
+    &__batas-bayar {
+        font-size: 1.8rem;
+    }
+
+    &__bank {
+        @include instruksiBayar;
+    }
+
+    &__nama-bank {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-auto-rows: min-content;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #DFE4F7;
+        padding-bottom: 2rem;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        img {
+            
+        }
+    }
+
+    &__va span,
+    &__total span {
+        font-size: 1.6rem;
+        color: #717375;
+    }
+
+    &__va h2,
+    &__total h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    &__va {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+        position: relative;
+
+        div {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-gap: 1rem;
+        }
+    }
+
+    &__copy-va {
+        @include cta;
+        background-color: #F6F8FF;
+        color: $color-primary;
+        align-self: start;
+    }
+
+    &__total {
+        display: grid;
+        grid-template-columns: max-content;
+        grid-gap: 1rem;
+    }
+}
+
+.copiedPopUp {
+    background-color: $color-font-primary;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: -2rem;
+}

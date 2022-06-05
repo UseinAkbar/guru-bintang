@@ -1,0 +1,138 @@
+.list-transaksi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    min-height: 80vh;
+}
+
+.item-transaksi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &__top,
+    &__middle,
+    &__bottom {
+        padding: 2rem 2.5rem;
+    }
+
+    &__top,
+    &__bottom {
+        background-color: #EBF0F4;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .detail-transaksi {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            p {
+                font-size: 1.4rem;
+                color: #4A4B4C;
+                font-weight: 500;
+            }
+
+            .invoice {
+                color: $color-primary;
+                font-weight: 600;
+            }
+        }
+
+        .status {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .success {
+            color: #43936C;
+            background-color: #F7F7F7;
+            border: 1px solid #B8DBCA;
+        }
+
+        .menunggu {
+            color: #CD7B2E;
+            background-color: #FFF9F2;
+            border: 1px solid #EECEB0;
+        }
+
+        .dibatalkan {
+            color: #CB3A31;
+            background-color: #FFF4F2;
+            border: 1px solid #EEB4B0;
+        }
+    }
+
+    &__middle {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        padding: 2.5rem;
+        border-left: 1px solid #DFE4F7;
+        border-right: 1px solid #DFE4F7;
+
+        .middle-detail {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            grid-gap: 1rem;
+            
+            span {
+                font-size: 1.4rem;
+                color: #989B9E;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            img {
+
+            }
+
+            .middle-judul {
+                font-size: 1.6rem;
+            }
+
+            .harga-coret {
+                font-size: 1.4rem;
+                font-weight: 500;
+                text-decoration: line-through;
+                color: #989B9E;
+            }
+
+            .harga-produk {
+                @include hargaTetap;
+                color: #5D5F60;
+            }
+        }
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+
+        span {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .harga-asli {
+            @include hargaTetap;
+        }
+    }
+}

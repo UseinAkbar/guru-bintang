@@ -1,0 +1,93 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-auto-rows: min-content;
+    grid-gap: 2.5rem;
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        padding: 1.6rem;
+        background-color: #FFF;
+        box-shadow: 0px 25px 50px rgba(27, 26, 75, .1);
+        border-radius: 8px;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__desc {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    &__border {
+        width: 100%;
+        height: 1.2px;
+        background-color: #DFE4F6;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__subtitle, &__kategori {
+        @include fontSpec;
+    }
+
+    &__subtitle {
+        color: $color-font-soften;
+        text-align: justify;
+    }
+
+    &__kategori {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__kategori > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__kategori img {
+        width: 2rem;
+    }
+
+    &__cta-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        align-items: center;
+
+    }
+
+    &__price {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__price-stroke {
+        font-size: 1.2rem;
+        color: #D8DCDF;
+        text-decoration: line-through;
+    }
+
+    &__price-real {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #FB6514;
+    }
+
+    &__cta {
+        @include cta;
+        font-size: 1rem;
+    }
+}

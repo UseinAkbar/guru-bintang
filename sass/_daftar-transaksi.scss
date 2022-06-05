@@ -1,0 +1,63 @@
+.transaksi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    padding: 5rem 8rem;
+
+    &__title {
+        font-size: 2.4rem;
+        color: #989B9E;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr 65vw;
+        grid-template-rows: min-content;
+        grid-gap: 5rem;
+    }
+
+    &__nav {
+        align-self: start;
+        border-radius: 6px;
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
+        position: sticky;
+        top: 3rem;
+
+        .tab-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            
+        }
+        
+        input:checked ~ .transaksi__tab {
+            font-weight: 600;
+            color: $color-primary;
+            background-color: #DFE4F6;
+            border-left: 4px solid $color-primary;
+        }
+    }
+    
+    &__tab {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #5D5F60;
+        border-left: 2px solid transparent;
+        padding: 1.4rem 2rem;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #DFE4F6;
+        }
+    }
+}
+
+.transaksi__tab-checked {
+    font-weight: 600;
+    color: $color-primary;
+    background-color: #DFE4F6;
+    border-left: 4px solid $color-primary;
+}

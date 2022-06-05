@@ -1,0 +1,37 @@
+.kelas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 12rem;
+        padding: 5rem 8rem;
+    }
+
+    &__heading {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        justify-items: center;
+        justify-self: center;
+        width: 65%;
+    }
+
+    &__softTitle {
+        @include titleSoft;
+    }
+
+    &__title {
+        @include titleSection;
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #5D5F60;
+        text-align: center;
+    }
+}

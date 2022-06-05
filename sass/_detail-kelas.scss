@@ -1,0 +1,113 @@
+.detailKelas {
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100vh - 8.6rem);
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        padding: 5rem 8rem;
+
+        @media screen and (min-width: 87.5em) {
+            grid-template-rows: 60vh;       
+        }
+    }
+    
+    &__banner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+    }
+
+    &__image-box {
+        position: relative;
+    }
+
+    &__rectangle, &__titik {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__rectangle {
+        width: 75%;
+        height: 100%;
+        background-color: #1D2E6C;
+        border-radius: 8px;
+    }
+
+    &__titik {
+        width: 20rem;
+        opacity: .6;
+    }
+
+    &__kelas-image {
+        width: 40rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &__banner-desc {
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content);
+        grid-gap: 3rem;
+        justify-items: start;
+        width: 90%;
+
+        .diskon {
+            display: flex;
+            align-items: center;
+            grid-gap: 5px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            background-color: $color-tertiary;
+            font-size: 1.2rem;
+            font-weight: 700;
+
+            img {
+                width: 1.6rem
+            }
+        }
+    }
+
+    &__title {
+        @include titleBanner;
+    }
+
+    &__spesifikasi {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-gap: 2rem;
+        @include fontSpec;
+        font-size: 1.4rem;
+        margin-top: -1rem;
+    }
+
+    &__spesifikasi > div {
+        @include alignColumn;
+    }
+
+    &__price {
+        @include alignColumn;
+        grid-gap: 10px;
+        margin-top: -1rem;
+
+        h3 {
+            @include hargaCoret;
+            font-size: 1.4rem;
+        }
+
+        h2 {
+            @include hargaTetap;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__cta {
+        @include cta;
+        @include alignColumn;
+    }
+}

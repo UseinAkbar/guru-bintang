@@ -1,0 +1,43 @@
+.trust {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1.5px solid #ABC5DF;
+
+    &__title {
+        @include titleSection;
+        width: 60%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    &__rating {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    &__review {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 1rem;
+        justify-items: center;
+
+        h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: $color-primary;
+
+            span {
+                color: $color-secondary;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+    }
+}

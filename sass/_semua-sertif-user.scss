@@ -1,0 +1,62 @@
+.allsertif {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 5rem;
+    padding: 5rem 8rem;
+    min-height: 80vh;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 3rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 1.5rem;
+        justify-items: center;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
+
+        img {
+            width: 20rem;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        a {
+            @include cta;
+        }
+    }
+
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        align-items: center;
+    }
+
+    &__back,
+    &__title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__back {
+        @include navCTA;
+    }
+
+    &__title {
+        @include titleNavDashboard;
+        justify-self: center;
+        padding: 1rem 2rem;
+    }
+}
