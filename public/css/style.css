@@ -1383,6 +1383,9 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 40rem;
   border-radius: 8px; }
+  @media screen and (min-width: 87.5em) {
+    .slide {
+      grid-template-rows: 45rem; } }
   .slide__teks {
     display: grid;
     grid-template-columns: 1fr;
