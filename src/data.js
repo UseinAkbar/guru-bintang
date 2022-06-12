@@ -11,11 +11,13 @@ import certificate from './asset/icon/certificate.svg';
 import kelas_1 from './asset/images/kelas_1.png';
 import kelas_2 from './asset/images/kelas_2.png';
 import sertif1 from './asset/images/sertif1.png';
-import sertif2 from './asset/images/sertif2.png';
 import itemTransaksi from './asset/images/item-transaksi.png';
 import kelasDashboard1 from './asset/images/kelas-dashboard1.png';
 import kelasDashboard2 from './asset/images/kelas-dashboard2.png';
 import profilTestimoni from './asset/images/testimoni.png'
+import introduction from './asset/images/introduction.png'
+import feedback from './asset/images/feedback.png'
+import post_test from './asset/images/post-test.png'
 import pengenalan_kelas from './asset/images/pengenalan_kelas.png';
 import mozaik_1 from './asset/images/mozaik_1.png';
 import mozaik_2 from './asset/images/mozaik_2.png';
@@ -142,11 +144,19 @@ class Tim {
     }
 }
 
+class Content {
+    constructor(judul, isi, tipe) {
+        this.judul = judul
+        this.isi = isi
+        this.tipe = tipe
+    }
+}
+
 const listTim = [
     new Tim('Kemal Aziz', 'Business Analyst', kemal, ['https://www.linkedin.com/in/kemal-aziz-ab706b1bb/', 'https://www.instagram.com/kemaldon/']),
     new Tim('Nisrina Thifal Khairunnisa', 'Product Designer', nisrina, ['www.linkedin.com/in/nisrina-thifal', 'https://www.instagram.com/nisrinaaa.th/']),
     new Tim('Usein Akbar', 'Front End Developer', usein, ['https://www.linkedin.com/in/usein-akbar-896379206/', 'https://www.instagram.com/useinakbarr/']),
-    new Tim('Alfian Nanda Putra', 'Backend Developer', alfian, ['https://www.linkedin.com/in/alfarand/', 'https://www.instagram.com/alfaraaa.nd/']),
+    new Tim('Alfian Nanda Putra', 'Backend Developer', alfian, ['https://www.linkedin.com/in/alfian-ananda-putra', 'https://www.instagram.com/alfianap352/']),
     new Tim('Alfara Nafi Dinara', 'Backend Developer', alfara, ['https://www.linkedin.com/in/alfarand/', 'https://www.instagram.com/alfaraaa.nd/'])
 ]
 
@@ -156,6 +166,14 @@ const listMateri = [
    new Materi('Filosofi Pendidikan Ki Hajar Dewantara', {content: 'Ki Hadjar menjelaskan bahwa tujuan pendidikan yaitu: “menuntun segala kodrat yang ada pada anak-anak, agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya baik sebagai manusia maupun sebagai anggota masyarakat. Oleh sebab itu, pendidik itu hanya dapat  menuntun tumbuh atau hidupnya kekuatan kodrat yang ada pada anak-anak, agar dapat memperbaiki lakunya (bukan dasarnya) hidup dan  tumbuhnya kekuatan kodrat anak”', title_content: 'Dasar Dasar Pendidikan'}),
    new Materi('POST TEST', {content: 'https://bit.ly/postTests'}),
    new Materi('LINK FEEDBACK, SERTIFIKAT, DAN KOMUNITAS', {content: '#'}),
+]
+
+const listContent = [
+    new Content('Pengenalan Kelas', introduction, 'gambar'),
+    new Content('Standar Kompetensi Guru', 'Kompetensi pedagogik adalah suatu kemampuan yang harus dimiliki guru dalam mengelola pembelajaran peserta didik, termasuk menguasai dan memahami karakter mereka. Dalam standar kompetensi guru ini, guru juga harus mampu membuat rancangan pembelajaran yang sesuai dengan kebutuhan peserta didik dan kurikulum yang sedang berjalan. Kompetensi kepribadian adalah kemampuan guru dalam berperilaku positif yang dapat menjadi teladan bagi peserta didik dengan berakhlak mulia, arif, dan berwibawa.', 'teks'),
+    new Content('Filosofi Pendidikan Ki Hajar Dewantara', 'Ki Hadjar menjelaskan bahwa tujuan pendidikan yaitu: “menuntun segala kodrat yang ada pada anak-anak, agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya baik sebagai manusia maupun sebagai anggota masyarakat. Oleh sebab itu, pendidik itu hanya dapat  menuntun tumbuh atau hidupnya kekuatan kodrat yang ada pada anak-anak, agar dapat memperbaiki lakunya (bukan dasarnya) hidup dan  tumbuhnya kekuatan kodrat anak”', 'teks'),
+    new Content('POST TEST', post_test, 'gambar'),
+    new Content('LINK FEEDBACK, SERTIFIKAT, DAN KOMUNITAS', feedback, 'gambar')
 ]
 
 const listDashboardSertif = [
@@ -168,7 +186,7 @@ const listDashboardKelas = [
 ]
 
 const listTransaksi = [
-    new Transaksi(itemTransaksi, 'Kelas Filosofi Mengajar untuk Guru', '20 Mei 2022', '11.20 WIB', 'ORD-ckfw0zds9plu00861l8edtm9i', 'Rp 300.000', 'Rp 120.000', 'berhasil'),
+    new Transaksi(itemTransaksi, 'Kelas Filosofi Mengajar untuk Guru', '20 Mei 2022', '11.20 WIB', 'ORD-ckfw0zds9plu00861l8edtm9i', 'Rp 300.000', 'GRATIS', 'berhasil'),
     new Transaksi(itemTransaksi, 'Kelas Teknologi & Pengajar', '27 Mei 2022', '15.45 WIB', 'ORD-ckfw0zds9plu00861l8desj6w', 'Rp 300.000', 'Rp 120.000', 'berhasil')
 ]
 
@@ -228,4 +246,4 @@ const langkahBayar = [
 
 const listTentangImage = [mozaik_1, mozaik_2, mozaik_3, mozaik_4, mozaik_5]
 
-export {perks, listKelas, listTestimoni, listFAQ, listFasilitas, listReview, langkahBayar, listDashboardKelas, listDashboardSertif, listTransaksi, listMateri, listTentangImage, listTentangFasilitas, listTim}
+export {perks, listKelas, listTestimoni, listFAQ, listFasilitas, listReview, langkahBayar, listDashboardKelas, listDashboardSertif, listTransaksi, listMateri, listTentangImage, listTentangFasilitas, listTim, listContent}

@@ -6,17 +6,21 @@ import bca from '../asset/images/bca.png';
 import moment from 'moment';
 import 'moment/locale/id';
 
-const Payment = ({isPay, handlePaymentPopUp}) => {
+const Payment = ({isPay, harga_asli, handlePaymentPopUp}) => {
     const [bank, setBank] = useState('')
     const navigate = useNavigate()
 
-    const handleTimePayment = () => {
-        const tomorrow = moment().add(1, 'days')
-        localStorage.setItem('countdown', (Date.now() + 86400000))
-        localStorage.setItem('dueTime', tomorrow.locale('id').format('LLLL'))
-        localStorage.setItem('bank', bank)
+    const handlePaymentSubmit = () => {
+        if(harga_asli === 'GRATIS') {
+            navigate('/payment/success')
+        } else {
+            const tomorrow = moment().add(1, 'days')
+            localStorage.setItem('countdown', (Date.now() + 86400000))
+            localStorage.setItem('dueTime', tomorrow.locale('id').format('LLLL'))
+            localStorage.setItem('bank', bank)
+            navigate('/instruksi-pembayaran')
+        }
         document.body.classList.toggle('fixBody')
-        navigate('/instruksi-pembayaran')
     }
 
     const handleOptionBank = e => {
@@ -55,7 +59,7 @@ const Payment = ({isPay, handlePaymentPopUp}) => {
                 <div className="payment__detailRingkasan">
                     <div>
                         <h2>Total Pembayaran</h2>
-                        <span className="payment__hargaTotal">Rp 105.000</span>
+                        <span className="payment__hargaTotal">{harga_asli}</span>
                     </div>
                     <div>
                         <h2>Diskon</h2>
@@ -66,9 +70,9 @@ const Payment = ({isPay, handlePaymentPopUp}) => {
             <div className="payment__total">
                 <div>
                     <h3>Total Bayar</h3>
-                    <h2>Rp 105.000</h2>
+                    <h2>{harga_asli}</h2>
                 </div>
-                <button className="payment__cta" onClick={handleTimePayment}>Bayar</button>
+                <button className="payment__cta" onClick={handlePaymentSubmit}>Bayar</button>
             </div>
         </div>
     )

@@ -20,7 +20,7 @@ const Navigation = () => {
                 <a href="/" className="nav__logo-link"><img src={logo} alt="Guru Bintang Logo" className="nav__logo" /></a>
                 <ul className="nav__list">
                     <li className="nav__item"><NavLink to='/' activeClassName="active" className="nav__link" exact>Beranda</NavLink></li>
-                    <li className="nav__item"><NavLink to='/kelas' activeClassName="active" className="nav__link" >Kelas</NavLink></li>
+                    <li className="nav__item"><NavLink to='/kelas' activeClassName="active" className="nav__link" >Katalog Kelas</NavLink></li>
                     <li className="nav__item"><NavLink to='/tentang' activeClassName="active" className="nav__link" >Tentang</NavLink></li>
                     {/* <li className="nav__item">
                         <span className={`nav__option ${isClicked && 'clicked'}`} onClick={handleOption}>

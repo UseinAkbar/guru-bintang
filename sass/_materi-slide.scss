@@ -1,0 +1,37 @@
+.slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40rem;
+    border-radius: 8px;
+
+    &__teks {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        align-content: center;
+        grid-gap: 2rem;
+        padding: 4rem;
+        color: #fff;
+        border-radius: 10px;
+        background-color: #0E1736;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__isi {
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    &__gambar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}

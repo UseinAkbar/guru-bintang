@@ -52,6 +52,7 @@ const Checkout = () => {
 
     const paymentProps = {
         isPay,
+        harga_asli,
         handlePaymentPopUp
     }
 

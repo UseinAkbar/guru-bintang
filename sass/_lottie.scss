@@ -1,0 +1,13 @@
+.loader {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: #F6F8FF;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+
+    .lottie {
+        width: 14rem;
+        height: 14rem;
+    }
+}

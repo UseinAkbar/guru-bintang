@@ -3,6 +3,7 @@ import Review from "./Review";
 import bag from '../asset/icon/bag.svg';
 import star from '../asset/icon/star.svg';
 import mentor from '../asset/images/mentor.png';
+import mentor2 from '../asset/images/mentor2.png';
 import { listFasilitas } from "../data";
 import ListMateri from "./ListMateri";
 
@@ -71,10 +72,10 @@ const FiturKelas = ({title, isPurchased, materi}) => {
                             </div>
                         </div>
                         <div className="fiturKelas__mentor-profil">
-                            <img src={mentor} alt="" className="fiturKelas__mentor-image" />
+                            <img src={mentor2} alt="" className="fiturKelas__mentor-image" />
                             <div>
-                                <h1 className="fiturKelas__mentor-nama">Handoko Tjokroamy</h1>
-                                <h2 className="fiturKelas__mentor-jabatan">CEO Hallo Coding</h2>
+                                <h1 className="fiturKelas__mentor-nama">Sarah Hermawan</h1>
+                                <h2 className="fiturKelas__mentor-jabatan">CEO Girl in Tech</h2>
                             </div>
                         </div>
                     </div>

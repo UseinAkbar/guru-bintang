@@ -11,7 +11,6 @@ import Testimoni from "./Testimoni";
 import FAQ from "./FAQ";
 
 const Home = ({access_token}) => {
-    console.log(access_token);
 
     // useEffect(() => {
     //     fetch('https://rangkoom.com/gurubintang/api/v1/classes', {
@@ -32,7 +31,7 @@ const Home = ({access_token}) => {
                         <img src={path} alt="" />
                     </h1>
                     <p className="banner__subtitle">Belajar bersama kami, riset dan karya ilmiah tidak lagi terasa susah.  Kami membangun Ekosistem Keilmiahan & Penelitian untuk Mencetak Inovator Muda Indonesia dengan pembelajaran secara daring.</p>
-                    <a href="" className="banner__cta">Mulai Belajar Sekarang</a>
+                    <a href="#kelas-populer" className="banner__cta">Mulai Belajar Sekarang</a>
                 </div>
                 <div className="banner__image-box">
                     <img src={person} loading='lazy' alt="Women holding the book" className="banner__image banner__image--1" />
@@ -53,11 +52,11 @@ const Home = ({access_token}) => {
                         )
                     })}
                 </div>
-                <div className="kelas">
+                <div className="kelas" id="kelas-populer">
                     <div className="kelas__header">
                         <h1 className="kelas__title">Kelas Online Spesial <span>Guru Bintang</span></h1>
                         <p className="kelas__desc">Akses materi yang berupa Modul, Video Pembelajaran, Quiz, Pre-Test, dan Post Test yang lengkap dalam satu platform. Pelajari sekarang di kelas online Guru Bintang.</p>
-                        <a href="" className="kelas__cta">Lihat Kelas Lainnya</a>
+                        <a href="/kelas" className="kelas__cta">Lihat Kelas Lainnya</a>
                     </div>
                     <Card listKelas={listKelas} />
                 </div>
