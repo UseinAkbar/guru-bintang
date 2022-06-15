@@ -154,7 +154,7 @@ class Content {
 
 const listTim = [
     new Tim('Kemal Aziz', 'Business Analyst', kemal, ['https://www.linkedin.com/in/kemal-aziz-ab706b1bb/', 'https://www.instagram.com/kemaldon/']),
-    new Tim('Nisrina Thifal Khairunnisa', 'Product Designer', nisrina, ['www.linkedin.com/in/nisrina-thifal', 'https://www.instagram.com/nisrinaaa.th/']),
+    new Tim('Nisrina Thifal Khairunnisa', 'Product Designer', nisrina, ['https://www.linkedin.com/in/nisrina-thifal', 'https://www.instagram.com/nisrinaaa.th/']),
     new Tim('Usein Akbar', 'Front End Developer', usein, ['https://www.linkedin.com/in/usein-akbar-896379206/', 'https://www.instagram.com/useinakbarr/']),
     new Tim('Alfian Nanda Putra', 'Backend Developer', alfian, ['https://www.linkedin.com/in/alfian-ananda-putra', 'https://www.instagram.com/alfianap352/']),
     new Tim('Alfara Nafi Dinara', 'Backend Developer', alfara, ['https://www.linkedin.com/in/alfarand/', 'https://www.instagram.com/alfaraaa.nd/'])
